@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Object Array</h1>
+    </center>
+    <hr>
+    <script>
+        let x=[{},{},{},{},{},{}]
+        document.write(`${(x[0])}`)
+    for(let i=0;i<x.length;i++){
+       
+
+        document.write(`<h4>${(x[i])}</h4>`)
+    }
+    
+    let users=[
+        {
+        //key-value-property
+          "id":1,
+          "name":"Shrikanth",
+          "email":"bhargavprabhu98@gmail.com",
+          "age":30,
+        },
+        {
+        //key-value-property
+          "id":2,
+          "name":"Shri",
+          "email":"prabhu98@gmail.com",
+          "age":20,
+        },
+        {
+        //key-value-property
+          "id":3,
+          "name":"kanth",
+          "email":"bhargav98@gmail.com",
+           "age":10,
+        },
+
+        {
+        //key-value-property
+          "id":4,
+          "name":"Shanth",
+          "email":"bhavprabhu98@gmail.com",
+          "age":40,
+        },
+
+];
+document.write(users[3].id,users[3].email);
+for(let i=0;i<users.length;i++){
+    document.write(`<h3>id=${users[i].id}<br>name=${users[i].name}<br>email=${users[i].email}<br>age=${users[i].age}</h3>`)
+
+}
+
+    </script>
+</body>
+</html>

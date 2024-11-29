@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASICS</title>
+</head>
+<body>
+    <center>
+        <h1>SCOPE</h1>
+    </center>
+        <hr>
+        <script>
+            // var is a weak signal and always have global scope
+            //let and const are block scope {} variables
+            let x=15;
+            if(x>10){
+                var a=10;//global
+               let b=20;//local
+               let c=30;
+               document.write(`GLOBAL SCOPE VARIABLE=${x}<br>`)
+               document.write(`GLOBAL SCOPE VARIABLE=${a}<br>`)
+               document.write(`LOCAL SCOPE VARIABLE=${b}<br>`)
+               document.write(`LOCAL SCOPE VARIABLE=${c}<br>`)
+
+            }
+            document.write(`GLOBAL SCOPE VARIABLE=${x}<br>`)
+
+            document.write(`GLOBAL SCOPE VARIABLE=${a}<br>`)
+            //errors=>syntax(compile errors)
+            //logical errors(runtime errors)-Exceptions
+            //try catch block is used to handle run time errors(Exception handling)
+            try{
+               document.write(`LOCAL SCOPE VARIABLE=${b}<br>`)
+               document.write(`LOCAL SCOPE VARIABLE=${c}<br>`)
+            }
+            catch(e){
+             document.write(`${e}`)  
+            }
+        </script>
+</body>
+</html>

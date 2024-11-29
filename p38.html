@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Array using Constructor</h1>
+    </center>
+    <hr>
+    <script>
+        let x=new Array()
+        document.write(`X is:${typeof(x)}`)
+        x[0]="blue"
+        x[1]="red"
+        x[2]="black"
+        x[3]="crimson"
+        x[4]="skyblue"
+        x[5]="gray"
+        document.write(`<h4>${x}</h4>`)
+        document.write(`<h4>${x[3]}</h4>`)
+        for(let i=0;i<x.length;i++){
+            document.write(`<h2 style="color:${x[i]};">FOREACH=${x[i]}</h2>`)
+        }
+
+    </script>
+</body>
+</html>

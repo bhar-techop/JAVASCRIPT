@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Call Back Function..!</h1>
+        <p>a Javascript callback is a fjunction which is to be executed after another function has finished execution</p>
+    </center>
+    <hr>
+    <script>
+//  document.write("<h1>Example-2</h1>")
+//  document.write("<h1>Example-3</h1>")
+        // setInterval(function displayAlert(){
+        //     document.write("<h1>Example-2</h1>"),
+        //     alert("hello good morning")
+        // },3000)
+        // document.write("<h1>Example-2</h1>")
+        // document.write("<h1>Example-3</h1>")
+
+        // setInterval(displayAlert=()=>{
+
+          
+        //     alert("hello good morning")
+        // },3000)
+        document.write(`<h1>Example-2</h1>`)
+function howareyou(question,yes,no){
+     document.write(question);
+     document.write(yes)
+     document.write(no)
+}
+if(confirm("how are you?")){
+         yes()
+     }
+     else{
+        no();
+
+     }
+    
+     howareyou(
+        "How are you",
+        function(){
+           document.write(`<h2>I am good thank you</h2>`)
+        },
+        function(){
+           document.write(`<h2>I am good thank you</h2>`)
+        }
+     )
+    
+    </script>
+</body>
+</html>

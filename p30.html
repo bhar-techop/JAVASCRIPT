@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Remainder of 2 numbers</h1>
+        
+        
+    </center>
+    <hr>
+
+    <button type="button" onclick="a()">click to calculate</button>
+    <p id="a">Rem of x%y=</p>
+    <script>
+        function a(){
+        let a=Number(prompt("enter the value a?"))
+        let b=Number(prompt("enter the value b?"))
+        let c=a%b;
+        document.getElementById('a').innerHTML=`<h1>Rem of x%y=${c}</h1>`
+        }
+    </script>
+</body>
+</html>

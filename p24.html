@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Function</h1>
+    </center>
+    <hr>
+    <script>
+        document.write(`<h1>ECMA SCRIPT CODE</h1>`)
+        document.write(`<h1>Function Defining..!(Local Function)</h1>`)
+        function sum(a,b){
+             return a+b
+        }
+        document.write("<b>sum=</b>",sum(50,27))
+        document.write(`<h1>Function Expressions..!</h1>`)
+            function expression(fname,lname){
+                let fullName=fname+' '+lname
+                return fullName
+            }
+            document.write("<b>fullName=</b>",expression("HTML","CSS"))
+            document.write(`<h1>Arrow Function..!</h1>`)
+            let e=(f,g)=>{
+                document.write("<p>This is arrow function..!</p>")
+                let rem=f+g
+                return rem
+            }
+document.write("<b>rem=</b>",e(30,7))
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASICS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .card {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .card h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .card label {
+            display: block;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+        .card input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .card button {
+            width: 100%;
+            padding: 10px;
+            background-color: skyblue;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .card button:hover {
+            background-color:skyblue;
+        }
+        .results {
+            margin-top: 20px;
+            padding: 10px;
+            background:white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .results h2 {
+            margin-top: 0;
+            color:red;
+        }
+        .results h3 {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Arithmetic Operators</h1>
+        <label for="firstNumber">Enter First Number:</label>
+        <input type="number" id="firstNumber" placeholder="Enter first number">
+        <label for="lastNumber">Enter Second Number:</label>
+        <input type="number" id="lastNumber" placeholder="Enter second number">
+        <button onclick="performCalculations()">Calculate</button>
+    </div>
+    <div id="results" class="results">
+    </div>
+
+    <script>
+        function performCalculations() {
+            let firstNumber = parseFloat(document.getElementById("firstNumber").value);
+            let lastNumber = parseFloat(document.getElementById("lastNumber").value);
+
+            document.getElementById("results").innerHTML = "";
+
+            if (isNaN(firstNumber) || isNaN(lastNumber)) {
+                document.getElementById("results").innerHTML = "<h3>Please enter valid numbers.</h3>";
+                return;
+            }
+
+            let addition = firstNumber + lastNumber;
+            let subtraction = firstNumber - lastNumber;
+            let multiplication = firstNumber * lastNumber;
+            let division =  firstNumber / lastNumber;
+            let modulus =  firstNumber % lastNumber;
+
+            let preIncrement = ++firstNumber;
+            let postIncrement = firstNumber++;
+            let preDecrement = --lastNumber;
+            let postDecrement = lastNumber--;
+
+            let resultsHTML = `
+                <h2>Results:</h2>
+                <h3>Addition: ${addition}</h3>
+                <h3>Subtraction: ${subtraction}</h3>
+                <h3>Multiplication: ${multiplication}</h3>
+                <h3>Division: ${division}</h3>
+                <h3>Modulus: ${modulus}</h3>
+                <h3>Pre-Increment (firstNumber): ${preIncrement}</h3>
+                <h3>Post-Increment (firstNumber): ${postIncrement}</h3>
+                <h3>Pre-Decrement (lastNumber): ${preDecrement}</h3>
+                <h3>Post-Decrement (lastNumber): ${postDecrement}</h3>
+            `;
+            document.getElementById("results").innerHTML = resultsHTML;
+        }
+    </script>
+</body>
+</html>

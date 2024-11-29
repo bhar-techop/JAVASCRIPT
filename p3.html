@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASICS</title>
+</head>
+<body>
+    <center>
+        <h1>VARIABLE SCOPES</h1>
+        <p>1) Global Scope -> Defines outside the block.</p>
+        <p>1) Local Scope -> Defines inside the block.</p>
+        
+    </center>
+    <hr>
+
+    <!-- Internal script -->
+     <script>
+        var a=12;
+        let b=33;
+        var c=44;
+        let d=50;
+        document.write(`<p>a=${a}<p>`);
+        document.write(`<p>b=${b}</p>`);
+        document.write(`<p>c=${c}</p>`);
+        document.write(`<p>d=${d}</p><hr>`);
+if(d>10){
+    document.write(`<p>CONDITION IS TRUE</p>`)
+    document.write(`<p>a=${a}</p>`)
+    document.write(`<p>b=${b}</p>`)
+    document.write(`<p>c=${c}</p>`);
+    document.write(`<p>d=${d}</p><hr>`);
+    let x=100;
+    var y=200;
+    const z=300;
+    document.write(`<p>x=${x}</p>`)
+    document.write(`<p>y=${y}</p>`)
+    document.write(`<p>z=${z}</p><hr>`);
+    document.write(`<p>x=${x}</p>`)
+}
+//document.write(`<p>x=${x}</p>`)
+document.write(`<p>y=${y}</p>`) /*Uncaught ReferenceError * it is outside the block which doesnot support the local scope*/
+// document.write(`<p>z=${z}</p><hr>`); /*Uncaught ReferenceError* * it is outside the block which doesnot support the local scope supports only global scope*/
+
+ let p=10000;
+ var q=20000;
+ const r=30000;
+ document.write(`<p>p=${p}</p>`)
+document.write(`<p>q=${q}</p>`) 
+ document.write(`<p>r=${r}</p><hr>`);
+ p=200000;
+ q=2000000;
+// r=3000000;
+ document.write(`<p>p=${p}</p>`)
+document.write(`<p>q=${q}</p>`) 
+ document.write(`<p>r=${r}</p><hr>`);
+
+ var isAdmin=false;
+ document.write(`<p>isAdmin=${typeof(isAdmin)}</p>`)
+ document.write(`<p>isAdmin=${isAdmin}</p>`)
+ document.write(`<p>isAdmin=${typeof(isAdmin)}</p>`)
+ isAdmin=true;
+ document.write(`<p>isAdmin=${isAdmin}</p><hr>`)
+ var title="Welcome to JS";
+ document.write(`<p>title=${typeof(title)}</p>`)
+ document.write(`<p>title=${title}</p>`)
+ title="A"
+ document.write(`<p>title=${typeof(title)}</p>`)
+ document.write(`<p>title=${title}</p><hr>`)
+
+ var xx=123567;
+ document.write(`<p>xx=${typeof(xx)}</p>`)
+ document.write(`<p>xx=${xx}</p>`)
+var yy=34.343
+document.write(`<p>yy=${typeof(yy)}</p>`)
+document.write(`<p>yy=${yy}</p><hr>`)
+
+
+var yy=2**10;
+document.write(`<p>yy=${typeof(yy)}</p>`)
+document.write(`<p>yy=${yy}</p><hr>`)
+
+var zz=0x902;
+document.write(`<p>zz=${typeof(zz)}</p>`)
+document.write(`<p>zz=${zz}</p><hr>`)
+
+let o=[1,2,4,5];
+document.write(`<p>a=${typeof(o)}</p>`)
+document.write(`<p>a=${o}</p>`)
+document.write(`<p>a=${o[0]}</p>`)
+document.write(`<p>a=${o[1]}</p>`)
+document.write(`<p>a=${o[2]}</p>`)
+document.write(`<p>a=${o[3]}</p><hr>`)
+
+//array
+let o1=["ram","bhargav","prabhu","be"];
+document.write(`<p>a=${typeof(o1)}</p>`)
+document.write(`<p>a=${o1}</p>`)
+document.write(`<p>a=${o1[0]}</p>`)
+document.write(`<p>a=${o1[1]}</p>`)
+document.write(`<p>a=${o1[2]}</p>`)
+document.write(`<p>a=${o1[3]}</p><hr>`)
+let o12=["ram","bhargav",12,11,true,];
+document.write(`<p>a=${typeof(o12)}</p>`)
+document.write(`<p>a=${o12}</p>`)
+document.write(`<p>a=${o12[0]}</p>`)
+document.write(`<p>a=${o12[1]}</p>`)
+document.write(`<p>a=${o12[2]}</p>`)
+document.write(`<p>a=${o12[3]}</p>`)
+document.write(`<p>a=${o12[4]}</p><hr>`)
+
+
+// Object
+// key=>value property
+var  user={
+    name:'ram',
+    mobile:1234567890,
+    email:'bhargavprabhu98@gmail.com'
+};
+document.write(`<p>user=${typeof(user)}</p>`)
+document.write(`<p>user=${user.name}</p>`)
+document.write(`<p>user=${user.mobile}</p>`)
+document.write(`<p>user=${user.email}</p>`)
+     </script>
+
+    
+</body>
+</html>

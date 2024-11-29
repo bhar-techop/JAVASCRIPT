@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Array using Constructor Parameter</h1>
+    </center>
+    <hr>
+    <script>
+        let x=new Array("blue","teal","gray","red","pink")
+    
+        document.write(`<h4>${x}</h4>`)
+        document.write(`<h4>${x[3]}</h4>`)
+        var i=0;
+        while(i<x.length){
+            document.write(`<h2 style="color:${x[i]};">FOREACH=${x[i]}</h2>`)
+            i++;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            border: 2px solid black;
+            padding: 30px;
+            width: 25%;
+           padding-right: 60px;           
+           text-align: center;
+           margin:8px auto
+        }
+       #a{
+        margin:8px auto;
+        background-color: red;
+        width: 30%;
+        height: 120px;
+        text-align: center;
+       }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Rem of 2 numbers</h1>
+    </center>
+    <hr>
+    <form action="" onsubmit="calculate(num)">
+        <div id="box">
+            <label for="">Enter input-1</label>
+            <input type="number" id="first"><br><br>
+            <label for="">Enter input-2</label>
+            <input type="number" id="second"><br><br>
+            <button type="button" onclick="calculate()">Calculate</button>
+            <button type="button" onclick="calculate()">Clear</button>
+        </div>
+        <div>
+            <p id='a'>Rem of x%y=</p>
+        </div>
+
+    </form>
+
+    <script>
+        function calculate(num){
+            let a=document.getElementById('first').value;
+            let b=document.getElementById('second').value;
+          let c=Number(a)%Number(b);
+          document.getElementById('a').innerHTML=`Rem of x%y= ${c}`;
+document.write(result)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Arrays</h1>
+        <p>An is a collection of data.it is declared using square brackets</p>
+    </center>
+    <hr>
+    <pre>
+   Array->it is a group of values
+   types
+       
+            1.Literal type(single)
+               1.Literal
+               2.Array using Constructor
+               3.Array using Constructor Parameter
+            
+            2.Object Array
+            3.JSON Array(JS object notation) Array (Response of REST [Representational State transfer]) API
+        
+    </pre>
+    <hr>
+    <script>
+         let a = [12,2,33,44,55,66];
+            document.write(`<h3> ${ a } </h3>`);
+            document.write(`<h3> ${ typeof(a) } </h3>`);
+            document.write(`<h3> ${ a[4] } </h3>`);
+
+            var b = ['Ram', 'bhargav', "prabhu", "ram", "prabhu"]; 
+            document.write(`<h3> ${ b } </h3>`);
+            document.write(`<h3> ${ b[2] } </h3>`); 
+            document.write(`<h3> ${ typeof(b) } </h3>`);
+            var a1 = [true,124,"admin@gmail.com",123.343]; 
+            document.write(`<h3> ${ a1 } </h3>`);
+            document.write(`<h3> ${ a1[0] } </h3>`); 
+            document.write(`<h3> ${ typeof(a1) } </h3>`);
+            for (let i = 0; i < a.length; i++) {
+                document.write(`<h3 style='color:blue;font-size:20px; font-family:sans-serif;text-shadow:3px 3px 3px red;'> ${ a[i] } </h3>`);
+            }
+            for (let i = 0; i < b.length; i++) {
+                document.write(`<h3 style='color:red;font-size:20px; font-family:sans-serif;text-shadow:3px 3px 3px red;'> ${ b[i] } </h3>`);
+            }
+            for (let i = 0; i < a1.length; i++) {
+                document.write(`<h3 style='color:skyblue;font-size:20px; font-family:sans-serif;text-shadow:3px 3px 3px red;'> ${ a1[i] } </h3>`);
+            }
+    </script>
+    <
+</body>
+</html>
